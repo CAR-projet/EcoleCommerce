@@ -31,9 +31,14 @@
 		<property name="definitions">
 			<list>
 				
+<<<<<<< HEAD
 				<value>/WEB-INF/tiles/home.xml</value>
 				<value>/WEB-INF/tiles/login.xml</value>
 				
+=======
+				<value>/WEB-INF/tiles/layout.xml</value>
+		
+>>>>>>> master
 			</list>
 		</property>
 	</bean> 
