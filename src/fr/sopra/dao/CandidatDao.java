@@ -8,7 +8,7 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import fr.ascadis.model.Candidat;
+import fr.sopra.model.Candidat;
 import fr.spora.idao.IDAO;
 
 
@@ -34,7 +34,7 @@ public class CandidatDao implements IDAO<Candidat, String>{
 	
 	
 	@Override
-	public Candidat find(Integer id) {
+	public Candidat find(String id) {
 		try {
 			return this.entityManager.find(Candidat.class, id);
 		}

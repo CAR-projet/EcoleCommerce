@@ -8,13 +8,13 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import fr.ascadis.model.Bloc;
+import fr.sopra.model.Matiere;
 import fr.spora.idao.IDAO;
 
 
 @Repository("MatiereDao")
 @Transactional
-public class MatiereDao implements IDAO<Matiere, String>{
+public class MatiereDao implements IDAO<Matiere, Integer>{
 
 	@PersistenceContext
 	private EntityManager entityManager;

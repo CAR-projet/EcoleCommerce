@@ -5,11 +5,14 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import fr.ascadis.model.Proposition;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
+import fr.sopra.model.Proposition;
 import fr.spora.idao.IDAO;
 @Repository("PropositionDao")
 @Transactional
-public class PropositionDao implements IDAO<Proposition, String>{
+public class PropositionDao implements IDAO<Proposition, Integer>{
 
 	@PersistenceContext
 	private EntityManager entityManager;

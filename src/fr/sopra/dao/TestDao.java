@@ -5,12 +5,14 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
-import fr.ascadis.model.Bloc;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
+
 import fr.sopra.model.Test;
 import fr.spora.idao.IDAO;
 @Repository("TestDao")
 @Transactional
-public class TestDao implements IDAO<Test, String>{
+public class TestDao implements IDAO<Test, Integer>{
 
 	@PersistenceContext
 	private EntityManager entityManager;
