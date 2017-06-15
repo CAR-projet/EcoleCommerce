@@ -32,7 +32,8 @@
 			<list>
 				
 				<value>/WEB-INF/tiles/home.xml</value>
-		
+				<value>/WEB-INF/tiles/login.xml</value>
+				
 			</list>
 		</property>
 	</bean> 
