@@ -2,6 +2,18 @@ package fr.sopra.model;
 
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 
 @DiscriminatorColumn(name="TYPE_PERSONNE")
 @Entity
@@ -70,15 +82,6 @@ public abstract class Personne implements Serializable {
 		this.prenom = prenom;
 	}
 
-	public Utilisateur(String nom, String prenom, String idPersonne) {
-		super();
-		this.idPersonne = idPersonne;
-		this.nom = nom;
-		this.prenom = prenom;
-		
-		
-		
-	}
 	
 }
 

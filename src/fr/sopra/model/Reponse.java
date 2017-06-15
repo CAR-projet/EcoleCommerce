@@ -1,11 +1,20 @@
 package fr.sopra.model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
 @Entity
 @Table(name = "forme")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Reponse {
 
-	@id
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "FORME_IDREPONSE")
 	private Integer idReponse;

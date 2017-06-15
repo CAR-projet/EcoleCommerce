@@ -15,7 +15,7 @@ import javax.persistence.Table;
 public class Matiere {
 	
 	
-	@id
+	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "FORME_IDMATIERE")
 	private Integer idMatiere;

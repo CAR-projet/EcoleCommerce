@@ -1,7 +1,10 @@
 package fr.sopra.model;
 
+import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 @DiscriminatorValue("ADMIN")
