@@ -41,12 +41,7 @@ public class Admin extends Personne {
 	}
 
 	
-	public Utilisateur(String username, String password) {
-		super();
-		this.username = username;
-		this.password = password;
-		
-	}
+
 		
 	public Admin() {
 		// TODO Auto-generated constructor stub

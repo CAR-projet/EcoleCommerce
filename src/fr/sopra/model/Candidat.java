@@ -1,5 +1,8 @@
 package fr.sopra.model;
 
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+
 public class Candidat extends Personne {
 	
 	
@@ -15,6 +18,21 @@ public class Candidat extends Personne {
 		@NotNull
 		@Size(max=50)
 		private String cleAcces;
-	}
+		
+		
+		public String getCleAcces() {
+			return cleAcces;
+		}
 
+
+		public void setCleAcces(String cleAcces) {
+			this.cleAcces = cleAcces;
+		}
+		
+		public Utilisateur(String cleAcces) {
+		super();
+			this.cleAcces = cleAcces;
 }
+	
+}
+
