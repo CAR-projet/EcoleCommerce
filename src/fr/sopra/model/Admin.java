@@ -3,8 +3,6 @@ package fr.sopra.model;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
@@ -22,8 +20,8 @@ public class Admin extends Personne {
 	@Column(name="ADM_PASSWORD")
 	@Size(max=50)
 	private String password;
-
-
+	
+	
 	public String getUsername() {
 		return username;
 	}

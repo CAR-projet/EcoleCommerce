@@ -7,6 +7,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -24,6 +26,10 @@ public class Reponse {
 	
 	@Column(name = "REP_REPONSE", nullable = false)
 	private String reponse;
+	
+	@ManyToOne
+	@JoinColumn(name="REP_ID_TEST")
+	private Test test;
 	
 	
 	
