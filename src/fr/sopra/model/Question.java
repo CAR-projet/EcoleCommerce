@@ -21,12 +21,12 @@ public class Question {
 	private Integer idQuestion;
 	
 	
-	@Column(name="QUESTO_ID")
+	@Column(name="QUESTO_INTIT")
 	@NotBlank
 	private String intitule;
 	
 	
-	@Column(name="QUESTO_ID")
+	@Column(name="QUESTO_NUM")
 	@NotBlank
 	private Integer numeroQuestion;
 	

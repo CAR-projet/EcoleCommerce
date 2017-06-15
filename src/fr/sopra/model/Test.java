@@ -17,16 +17,16 @@ public class Test {
 
 		@Id
 		@GeneratedValue(strategy=GenerationType.IDENTITY)
-		@Column(name="TEST_ID")
+		@Column(name="TES_ID")
 		private Integer idTest;
 		
-		@Column(name="TEST_NIVEAU")
+		@Column(name="TES_NIVEAU")
 		private NiveauTest niveau;
 		
-		@Column(name="TEST_BRANCHE")
+		@Column(name="TES_BRANCHE")
 		private BrancheTest branche;
 		
-		@Column(name="TEST_DATE")
+		@Column(name="TES_DATE")
 		private Date date;
 
 		

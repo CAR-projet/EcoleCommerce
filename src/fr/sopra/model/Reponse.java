@@ -10,19 +10,19 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "forme")
+@Table(name = "reponse")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Reponse {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "FORME_IDREPONSE")
+	@Column(name = "REP_ID")
 	private Integer idReponse;
 	
-	@Column(name = "FORME_TEMPSREPONSE", nullable = false)
+	@Column(name = "REP_TPSREP", nullable = false)
 	private Integer tempsReponse;
 	
-	@Column(name = "FORME_REPONSE", nullable = false)
+	@Column(name = "REP_REPONSE", nullable = false)
 	private String reponse;
 	
 	

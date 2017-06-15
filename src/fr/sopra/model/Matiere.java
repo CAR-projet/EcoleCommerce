@@ -10,17 +10,17 @@ import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "forme")
-@Inheritance(strategy = InheritanceType.JOINED)
+@Table(name = "matiere")
+//@Inheritance(strategy = InheritanceType.JOINED)
 public class Matiere {
 	
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "FORME_IDMATIERE")
+	@Column(name = "MAT_ID")
 	private Integer idMatiere;
 	
-	@Column(name = "FORME_NOMMATIERE", nullable = false)
+	@Column(name = "MAT_NOM", nullable = false)
 	private String nomMatiere;
 	
 	

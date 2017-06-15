@@ -3,23 +3,23 @@ package fr.sopra.model;
 import javax.persistence.Column;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
+import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 @Entity
 @DiscriminatorValue("ADMIN")
+
 public class Admin extends Personne {
 	
 	private static final long serialVersionUID = 1L;
 	
 
-	@Column(name="UTI_USERNAME")
-	@NotNull
+	@Column(name="ADM_USERNAME")
 	@Size(max=50)
 	private String username;
 	
-	@Column(name="UTI_PASSWORD")
-	@NotNull
+	@Column(name="ADM_PASSWORD")
 	@Size(max=50)
 	private String password;
 

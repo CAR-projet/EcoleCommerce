@@ -9,7 +9,6 @@ import javax.validation.constraints.Size;
 @DiscriminatorValue("CANDIDAT")
 public class Candidat extends Personne {
 	
-	
 
 	public Candidat() {}
 		// TODO Auto-generated constructor stub
@@ -17,9 +16,8 @@ public class Candidat extends Personne {
 		private static final long serialVersionUID = 1L;
 		
 
-		@Column(name="UTI_CLEACCES")
-		@NotNull
-		@Size(max=50)
+		@Column(name="CAN_CLEACCES")
+		@Size(max=6)
 		private String cleAcces;
 		
 		

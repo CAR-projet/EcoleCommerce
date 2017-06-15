@@ -15,7 +15,7 @@ import javax.persistence.UniqueConstraint;
 import org.hibernate.validator.constraints.NotBlank;
 
 @Entity
-@Table(name="proposition", uniqueConstraints = { @UniqueConstraint(columnNames = "UTI_USERNAME") })
+@Table(name="proposition")
 public class Proposition {
 
 	@Id
@@ -23,7 +23,7 @@ public class Proposition {
 	@Column(name="PRO_ID")
 	private Integer idProposition;
 	
-	@Column(name="PRO_COR")
+	@Column(name="PRO_CORRECT")
 	@NotBlank
 	private Boolean isCorrect;
 	

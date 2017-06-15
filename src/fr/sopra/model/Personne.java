@@ -6,13 +6,14 @@ import javax.persistence.Column;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.GenericGenerator;
 
 
 @DiscriminatorColumn(name="TYPE_PERSONNE")
@@ -25,17 +26,18 @@ public abstract class Personne implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@Column(name="UTI_IDPERSONNE", nullable=false)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name="PER_ID")
+	@GeneratedValue(generator = "system-uuid")
+	@GenericGenerator(name="system-uuid", strategy="uuid")
 	private String idPersonne;
 
 
-	@Column(name="UTI_NOM")
+	@Column(name="PER_NOM")
 	@NotNull
 	@Size(max=50)
 	private String nom;
 	
-	@Column(name="UTI_PRENOM")
+	@Column(name="PER_PRENOM")
 	@NotNull
 	@Size(max=50)
 	private String prenom;

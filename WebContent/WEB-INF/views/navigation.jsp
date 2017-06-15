@@ -16,7 +16,7 @@
 			<a href="#" class="brand-logo">Tetris - <spring:message code="${ titleCode }" /></a>
 			
 			
-			<ul id="nav-mobile" class="right hide-on-med-and-down">
+			<ul id="nav-mobile" class="right hide-on-med-and-down"> 
 				<c:if test="${ utilisateur != null }">
 					<li><a href="${ pageContext.request.contextPath }/home"><spring:message code="menu.home" /></a></li>
 					
