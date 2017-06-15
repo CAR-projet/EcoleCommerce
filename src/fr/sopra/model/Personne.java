@@ -12,6 +12,11 @@ public abstract class Personne implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
+	@Id
+	@Column(name="UTI_IDPERSONNE", nullable=false)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private String idPersonne;
+
 
 	@Column(name="UTI_NOM")
 	@NotNull
@@ -23,41 +28,57 @@ public abstract class Personne implements Serializable {
 	@Size(max=50)
 	private String prenom;
 
+	/**
+	 * @return the idPersonne
+	 */
+	public String getIdPersonne() {
+		return idPersonne;
+	}
 
-	@Id
-	@Column(name="UTI_ID", nullable=false)
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int id;
+	/**
+	 * @param idPersonne the idPersonne to set
+	 */
+	public void setIdPersonne(String idPersonne) {
+		this.idPersonne = idPersonne;
+	}
 
-
+	/**
+	 * @return the nom
+	 */
 	public String getNom() {
 		return nom;
 	}
 
-
+	/**
+	 * @param nom the nom to set
+	 */
 	public void setNom(String nom) {
 		this.nom = nom;
 	}
 
-
+	/**
+	 * @return the prenom
+	 */
 	public String getPrenom() {
 		return prenom;
 	}
 
-
+	/**
+	 * @param prenom the prenom to set
+	 */
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
 
-
-	public int getId() {
-		return id;
+	public Utilisateur(String nom, String prenom, String idPersonne) {
+		super();
+		this.idPersonne = idPersonne;
+		this.nom = nom;
+		this.prenom = prenom;
+		
+		
+		
 	}
-
-
-	public void setId(int id) {
-		this.id = id;
-	}
-
+	
 }
 
