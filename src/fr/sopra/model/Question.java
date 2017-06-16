@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -44,18 +45,9 @@ public class Question {
 	@OneToMany(mappedBy="question")
 	private List<Proposition> propositions;
 	
+	@OneToOne(mappedBy="question")
+	private Reponse reponse;
 	
-	
-	
-	
-///	@ManyToMany
-//	@JoinColumn(name="QUESTO_IDQUESTA")
-//	@JsonIgnore
-//	private Questionnaire questionnaire;
-	
-	
-//	@OneToMany(mappedBy="question")
-//	private List<Proposition> propositions;
 	
 	public Integer getIdQuestion() {
 		return idQuestion;
