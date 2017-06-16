@@ -8,4 +8,9 @@
 		<put-attribute name="title" value="le titre de test" cascade="true" />
 		<put-attribute name="body" value="/WEB-INF/views/tests.jsp" />
 	</definition>
+	
+	<definition name="editTests" extends="base.definition">
+		<put-attribute name="title" value="le titre de edittest" cascade="true" />
+		<put-attribute name="body" value="/WEB-INF/views/editTests.jsp" />
+	</definition>
 </tiles-definitions>
