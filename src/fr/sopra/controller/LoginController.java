@@ -37,7 +37,7 @@ public class LoginController {
 				if (administrateur!= null) {
 					session.setAttribute("utilisateur", administrateur);
 					session.setAttribute("username", administrateur.getUsername());
-					return "redirect:/tests";
+					return "redirect:/accueil";
 				}
 			}
 			

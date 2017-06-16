@@ -8,7 +8,10 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 import fr.sopra.model.Candidat;
 import fr.sopra.model.Test;
 import fr.spora.idao.ITestDao;
