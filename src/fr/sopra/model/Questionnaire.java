@@ -32,11 +32,11 @@ public class Questionnaire {
 	private List<Question> questions;
 
 	@ManyToOne
-	@JoinColumn(name="QUESTO_ID_TEST")
+	@JoinColumn(name="QUESTA_ID_TEST")
 	private Test test;
 	
 	@ManyToOne
-	@JoinColumn(name="QUESTO_ID_MAT")
+	@JoinColumn(name="QUESTA_ID_MAT")
 	private Matiere matiere;
 	
 	
