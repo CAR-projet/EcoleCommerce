@@ -1,5 +1,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
+
+<div class="fixed-action-btn">
+	<a href="tests/edit" class="btn-floating btn-large red">
+		<i class="large material-icons">add</i>
+	</a>
+</div>
+
+
+
+
 <div class="row">
 	<ul class="collapsible" data-collapsible="accordion">
 		<c:forEach items="${ tests }" var="test">
@@ -12,17 +22,19 @@
 					<p>
 						Niveau : ${ test.niveau}
 					</p>
-				</div>
 				
-				<div class="collapsible-body">
+				
+				
 					<p>
 						 Branche : ${ test.branche}
 					</p>
-				</div>
-				<div class="collapsible-body">
+				
+				
 					<p>
-						 Candidat : ${ test.candidat.nom}
+						 Candidat : ${ test.candidat.prenom} ${ test.candidat.nom}
 					</p>
+					
+					
 				</div>
 			</li>
 		</c:forEach>
