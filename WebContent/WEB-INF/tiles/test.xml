@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tiles-definitions>
-	<!-- Configuration de la vue "home" -->
-	<definition name="test" extends="base.definition">
-		<put-attribute name="title" value="tests" cascade="true" />
-		<put-attribute name="body" value="/WEB-INF/views/tests.jsp" />
-	</definition>
-</tiles-definitions>

@@ -34,8 +34,8 @@
 
 				<value>/WEB-INF/tiles/home.xml</value>
 				<value>/WEB-INF/tiles/login.xml</value>
-				
-			<value>/WEB-INF/tiles/layout.xml</value>
+				<value>/WEB-INF/tiles/tests.xml</value>
+				<value>/WEB-INF/tiles/layout.xml</value>
 		
 
 			</list>

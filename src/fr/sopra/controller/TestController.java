@@ -11,7 +11,7 @@ import fr.spora.idao.IDAO;
 
 
 @Controller
-@RequestMapping("/Test")
+@RequestMapping("/tests")
 
 public class TestController {
 	

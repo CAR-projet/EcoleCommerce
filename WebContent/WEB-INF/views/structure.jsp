@@ -1,6 +1,6 @@
-
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
-<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+
 
 
 
@@ -21,7 +21,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		
-		<title><spring:message code="${ titleCode }" /></title>
+		<title></title>
 	</head>
 	
 	<body>
