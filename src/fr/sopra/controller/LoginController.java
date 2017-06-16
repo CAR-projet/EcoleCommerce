@@ -30,29 +30,23 @@ public class LoginController {
 	
 	@RequestMapping(value="", method=RequestMethod.POST)
 	public String login(@Valid @ModelAttribute("admin") Admin administrateur, BindingResult result, Model model, HttpSession session) {
-		System.out.println("debut");
 
 			try {
 				administrateur =  this.personneDao.auth(administrateur.getUsername(), administrateur.getPassword());
-				System.out.println("coucou");
 				
 				if (administrateur!= null) {
 					session.setAttribute("utilisateur", administrateur);
 					session.setAttribute("username", administrateur.getUsername());
-					System.out.println("admin=!null");
 					return "redirect:/tests";
 				}
 			}
 			
 			catch (WrongUsernameOrPasswordException ex) {
-				System.out.println("coucou erreur");
 				result.rejectValue("password", ex.getCode(), ex.getMessage());
-				System.out.println("yoyoyo");
 				return "login";
 
 			}
 		
-		System.out.println("login");
 		return "login";
 	
 	}
