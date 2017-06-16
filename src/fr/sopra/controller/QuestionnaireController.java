@@ -46,7 +46,7 @@ public class QuestionnaireController {
 	
 	@RequestMapping(value={ "/edit", "/edit/{id}" }, method=RequestMethod.POST)
 	public String edit(@PathVariable(value="id", required=false) Integer idQuestionnaire, @Valid @ModelAttribute("questionnaire") Questionnaire questionnaire, @ModelAttribute("matiere") Matiere matiere, BindingResult result) {
-		matiere.setQuestionnaires(questionnaire);
+		questionnaire.setMatiere(matiere);
 		matiere=this.MatiereDao.save(matiere);
 		questionnaire = this.QuestionnaireDao.save(questionnaire);
 		return "redirect:/questionnaires/" ;
