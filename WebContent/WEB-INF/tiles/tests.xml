@@ -9,8 +9,13 @@
 		<put-attribute name="body" value="/WEB-INF/views/tests.jsp" />
 	</definition>
 	
-	<definition name="editTests" extends="base.definition">
-		<put-attribute name="title" value="le titre de edittest" cascade="true" />
+	<definition name="editTest" extends="base.definition">
+		<put-attribute name="title" value="Editer un test" cascade="true" />
+		<put-attribute name="body" value="/WEB-INF/views/editTests.jsp" />
+	</definition>
+	
+		<definition name="addTest" extends="base.definition">
+		<put-attribute name="title" value="Ajouter un test" cascade="true" />
 		<put-attribute name="body" value="/WEB-INF/views/editTests.jsp" />
 	</definition>
 </tiles-definitions>

@@ -2,11 +2,7 @@
 </html><%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
-<div class="fixed-action-btn">
-	<a href="questionnaire/edit" class="btn-floating btn-large red">
-		<i class="large material-icons">add</i>
-	</a>
-</div>
+
 <div class="row">
 	<div class="col s4">
 		<h5>Formulaire Test</h5>
@@ -47,7 +43,12 @@
 			
 			<c:if test="${ test.id == null }">
 				<button class="btn amber success waves-effect waves-light" type="submit">
-					Continuer <i class="material-icons right">send</i>
+					Ajouter <i class="material-icons right">send</i>
+				</button>
+			</c:if>
+			<c:if test="${ test.id != null }">
+				<button class="btn amber success waves-effect waves-light" type="submit">
+					Valider <i class="material-icons right">send</i>
 				</button>
 			</c:if>
 </form>
