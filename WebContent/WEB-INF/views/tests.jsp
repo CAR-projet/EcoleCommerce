@@ -17,8 +17,8 @@
 				<div class="collapsible-header">
 					Test #${ test.idTest }
 						<div class="card-action">
-					<a href="tests/delete/${ test.idTest }">Supprimer</a>
-					<a href="tests/edit/${ test.idTest }">Editer</a>
+					<a class="btn amber success waves-effect waves-light" href="tests/delete/${ test.idTest }">Supprimer</a>
+					<a class="btn amber success waves-effect waves-light" href="tests/edit/${ test.idTest }">Editer</a>
 				</div>
 				</div>
 				
