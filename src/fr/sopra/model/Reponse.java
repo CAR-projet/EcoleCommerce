@@ -9,6 +9,7 @@ import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -21,7 +22,7 @@ public class Reponse {
 	@Column(name = "REP_ID")
 	private Integer idReponse;
 	
-	@Column(name = "REP_TPSREP", nullable = false)
+	@Column(name = "REP_TEMPSREP", nullable = false)
 	private Integer tempsReponse;
 	
 	@Column(name = "REP_REPONSE", nullable = false)
@@ -31,6 +32,9 @@ public class Reponse {
 	@JoinColumn(name="REP_ID_TEST")
 	private Test test;
 	
+	@OneToOne
+	@JoinColumn(name="REP_ID_QUESTION")
+	private Question question;
 	
 	
 	/**

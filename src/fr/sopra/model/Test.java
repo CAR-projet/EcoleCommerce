@@ -15,8 +15,6 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 @Entity
 @Table(name="test")
 public class Test {
@@ -41,6 +39,13 @@ public class Test {
 		
 		@OneToMany(mappedBy="test")
 		private List<Reponse> reponses;
+		
+		
+		@OneToOne
+		@JoinColumn(name="TES_ID_CANDIDAT")
+		private Candidat candidat;
+		
+		
 		
 		
 		public Integer getIdTest() {
