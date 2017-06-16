@@ -11,10 +11,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-
+import fr.sopra.exception.WrongUsernameOrPasswordException;
 import fr.sopra.model.Questionnaire;
 import fr.sopra.model.Test;
 import fr.spora.idao.IDAO;
+import fr.spora.idao.ITestDao;
 
 
 @Controller
@@ -23,10 +24,11 @@ import fr.spora.idao.IDAO;
 public class TestController {
 	
 		@Autowired
-		private IDAO<Test, Integer> TestDao;
+		private ITestDao TestDao;
 		
 		@Autowired
 		private IDAO<Questionnaire, Integer> QuestionnaireDao;
+		
 		
 		
 		@RequestMapping("")
@@ -36,11 +38,13 @@ public class TestController {
 		}
 		
 		@RequestMapping(value={ "/edit", "/edit/{id}" }, method=RequestMethod.GET)
-		public String edit(@PathVariable(value="id", required=false) Integer idTest, Model model) {
+		public String edit(@PathVariable(value="id", required=false)Integer idTest, Model model) {
+	
 			if (idTest != null) {
+				model.addAttribute("candidat", this.TestDao.findWithIdTest(idTest));
 				model.addAttribute("test", this.TestDao.find(idTest));
 			}
-			
+	
 			return (idTest != null) ? "editTest" : "addTest";
 		}
 		
