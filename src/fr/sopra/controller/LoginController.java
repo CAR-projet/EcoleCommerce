@@ -20,8 +20,6 @@ import fr.spora.idao.IDAO;
 @RequestMapping("/login")
 public class LoginController {
 
-	@Autowired
-	private IDAO<Admin,String> personneDAO;
 	
 	@RequestMapping(value="/login", method=RequestMethod.GET)
 	public String login() {
