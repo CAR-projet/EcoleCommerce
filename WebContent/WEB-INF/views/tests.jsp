@@ -1,10 +1,5 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
-
-
-
-
-
 <div class="row">
 	<ul class="collapsible" data-collapsible="accordion">
 		<c:forEach items="${ tests }" var="test">
