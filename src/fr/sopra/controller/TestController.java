@@ -11,18 +11,18 @@ import fr.spora.idao.IDAO;
 
 
 @Controller
-@RequestMapping("/Tests")
+@RequestMapping("/Test")
 
 public class TestController {
 	
 		@Autowired
-		private IDAO<Test, Integer> partieDAO;
+		private IDAO<Test, Integer> TestDao;
 		
 		
 		@RequestMapping("")
 		public String getAll(Model model) {
-			model.addAttribute("parties", this.partieDAO.findAll());
+			model.addAttribute("tests", this.TestDao.findAll());
 			
-			return "Tests";
+			return "tests";
 		}
 }
