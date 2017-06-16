@@ -1,17 +1,14 @@
 
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 </html><%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 
-<div class="fixed-action-btn">
-	<a href="questionnaire/edit" class="btn-floating btn-large red">
-		<i class="large material-icons">add</i>
-	</a>
-</div>
+
 <div class="row">
 	<div class="col s4">
 		<h5>Formulaire Test</h5>
-		<form method="post" action="">
-			<input type="hidden" name="id" value="${ test.id }" />
+		<form:form method="post" modelAttribute="test">
+			<input type="hidden" name="id" value="${ test.idTest }" />
 			
 			<div class="input-field">
 				<select id="test_niveau"  name="niveau"  >
@@ -33,24 +30,29 @@
 				
 			 </div> 
 			<div class="input-field">
-				<input id="candidat_nom" type="text" class="validate" name="nom" value="${ test.niveau }" />
+				<input id="candidat_nom" type="text" class="validate" name="nom" value="${ candidat.nom }" />
 				<label for="candidat_nom">Nom du candidat</label>
 			</div>
 			<div class="input-field">
-				<input id="candidat_nom" type="text" class="validate" name="nom" value="${ test.niveau }" />
+				<input id="candidat_nom" type="text" class="validate" name="nom" value="${ candidat.prenom }" />
 				<label for="candidat_nom">Prénom du candidat</label>
 			</div>
 				<div class="input-field">
-				<input id="test_date" type="date" class="validate" name="nom" value="${ test.niveau }" />
+				<input id="test_date" type="date" class="validate" name="nom" value="${ test.date }" />
 			<label for="test_date"></label> 
 			</div>
 			
-			<c:if test="${ test.id == null }">
+			<c:if test="${ test.idTest == null }">
 				<button class="btn amber success waves-effect waves-light" type="submit">
-					Continuer <i class="material-icons right">send</i>
+					Ajouter <i class="material-icons right">send</i>
 				</button>
 			</c:if>
-</form>
+			<c:if test="${ test.idTest != null }">
+				<button class="btn amber success waves-effect waves-light" type="submit">
+					Valider <i class="material-icons right">send</i>
+				</button>
+			</c:if>
+</form:form>
 </div>
 </div>
 <%-- <h2> Choix Questionnaire :</h2>

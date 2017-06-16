@@ -16,6 +16,10 @@
 			<li>
 				<div class="collapsible-header">
 					Test #${ test.idTest }
+						<div class="card-action">
+					<a href="tests/delete/${ test.idTest }">Supprimer</a>
+					<a href="tests/edit/${ test.idTest }">Editer</a>
+				</div>
 				</div>
 				
 				<div class="collapsible-body">
