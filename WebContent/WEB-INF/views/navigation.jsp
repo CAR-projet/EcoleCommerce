@@ -10,15 +10,15 @@
 
 			<ul id="nav-mobile" class="right hide-on-med-and-down">
 
-				<li><a href="./accueil">accueil</a></li>
+				<li><a href="/EcoleCommerce/accueil">accueil</a></li>
 
-				<li><a href="./tests">tests</a></li>
+				<li><a href="/EcoleCommerce/tests">tests</a></li>
 
-				<li><a href="./questionnaire">questionnaires</a></li>
+				<li><a href="/EcoleCommerce/questionnaire">questionnaires</a></li>
 
-				<li><a href="./questions">questions</a></li>
+				<li><a href="/EcoleCommerce/questions">questions</a></li>
 				
-				<li><a href="./login">Se Déconnecter</a></li>
+				<li><a href="/EcoleCommerce/login">Se Déconnecter</a></li>
 
 			</ul>
 
