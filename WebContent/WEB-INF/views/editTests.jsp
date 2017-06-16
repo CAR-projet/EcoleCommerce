@@ -10,38 +10,43 @@
 		<form:form method="post" modelAttribute="test">
 			<input type="hidden" name="id" value="${ test.idTest }" />
 			
-			<div class="input-field">
-				<select id="test_niveau"  name="niveau"  >
+			<div class="input-field" >
+				<form:select path="niveau" id="test_niveau"  name="niveau"  >
 				<option selected >Niveau
-				<option>BAC
-				<option>BAC_2
-				<option>BAC_3
-				</select>
+				<option value=" ${ test.niveau }">BAC
+				<option value=" ${ test.niveau }">BAC_2
+				<option value=" ${ test.niveau }">BAC_3
+				</form:select>
 			
 			</div>
 			
 			 <div class="input-field"> 
-				<select id="test_branche"  name="branche"  >
+				<form:select path ="branche" id="test_branche"  name="branche"  >
 				<option selected >Branche
-				<option>ingenieur_affaire
-				<option>commercial
-				<option>manager
-				</select>
+				<option value=" ${ test.branche }" >ingenieur_affaire
+				<option value=" ${ test.branche }">commercial
+				<option value=" ${ test.branche }">manager
+				</form:select>
 				
 			 </div> 
-			<div class="input-field">
-				<input id="candidat_nom" type="text" class="validate" name="nom" value="${ candidat.nom }" />
-				<label for="candidat_nom">Nom du candidat</label>
-			</div>
-			<div class="input-field">
-				<input id="candidat_nom" type="text" class="validate" name="nom" value="${ candidat.prenom }" />
-				<label for="candidat_nom">Prénom du candidat</label>
-			</div>
+			
 				<div class="input-field">
-				<input id="test_date" type="date" class="validate" name="nom" value="${ test.date }" />
+				<form:input path="date" id="test_date" type="date" class="validate" name="nom" value="${ test.date }" />
 			<label for="test_date"></label> 
 			</div>
 			
+		
+			<input type="hidden" name="id" value="${ candidat.idPersonne }" />
+			<div class="input-field">
+				<form:input path="candidat.nom" id="candidat_nom" type="text" class="validate" name="nom" value="${ candidat.nom }" />
+				<label for="candidat_nom">Nom du candidat</label>
+			</div>
+			<div class="input-field">
+				<form:input path="candidat.prenom" id="candidat_nom" type="text" class="validate" name="nom" value="${ candidat.prenom }" />
+				<label for="candidat_nom">Prénom du candidat</label>
+			</div>
+			
+			 </form:form>
 			<c:if test="${ test.idTest == null }">
 				<button class="btn amber success waves-effect waves-light" type="submit">
 					Ajouter <i class="material-icons right">send</i>
@@ -52,7 +57,7 @@
 					Valider <i class="material-icons right">send</i>
 				</button>
 			</c:if>
-</form:form>
+				
 </div>
 </div>
 <%-- <h2> Choix Questionnaire :</h2>

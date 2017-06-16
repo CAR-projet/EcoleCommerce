@@ -29,9 +29,7 @@ public class TestController {
 		
 		@Autowired
 		private IDAO<Candidat, Integer> CandidatDao;
-		
-		@Autowired
-		private IDAO<Questionnaire, Integer> QuestionnaireDao;
+	
 		
 		
 		
@@ -54,7 +52,7 @@ public class TestController {
 		
 		@RequestMapping(value={ "/edit", "/edit/{id}" }, method=RequestMethod.POST)
 		public String edit(@PathVariable(value="id", required=false) Integer idTest, @Valid @ModelAttribute("test") Test test, @ModelAttribute("candidat") Candidat candidat, BindingResult result) {
-			candidat.setTest(test);
+			test.setCandidat(candidat);
 			candidat=this.CandidatDao.save(candidat);
 			test = this.TestDao.save(test);
 			return "redirect:/tests/" ;
