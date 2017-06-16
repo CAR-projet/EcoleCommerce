@@ -55,6 +55,42 @@ public class Question {
 
 
 
+	public Questionnaire getQuestionnaire() {
+		return questionnaire;
+	}
+
+
+
+	public void setQuestionnaire(Questionnaire questionnaire) {
+		this.questionnaire = questionnaire;
+	}
+
+
+
+	public List<Proposition> getPropositions() {
+		return propositions;
+	}
+
+
+
+	public void setPropositions(List<Proposition> propositions) {
+		this.propositions = propositions;
+	}
+
+
+
+	public Reponse getReponse() {
+		return reponse;
+	}
+
+
+
+	public void setReponse(Reponse reponse) {
+		this.reponse = reponse;
+	}
+
+
+
 	public void setIdQuestion(Integer idQuestion) {
 		this.idQuestion = idQuestion;
 	}

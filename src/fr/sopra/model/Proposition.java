@@ -44,6 +44,34 @@ public class Proposition {
 
 
 
+	public Integer getIdProposQuestion() {
+		return idProposQuestion;
+	}
+
+
+
+
+	public void setIdProposQuestion(Integer idProposQuestion) {
+		this.idProposQuestion = idProposQuestion;
+	}
+
+
+
+
+	public Question getQuestion() {
+		return question;
+	}
+
+
+
+
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
+
+
+
+
 	public void setIdProposition(Integer idProposition) {
 		this.idProposition = idProposition;
 	}

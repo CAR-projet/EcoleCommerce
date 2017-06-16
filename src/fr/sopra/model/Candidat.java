@@ -29,6 +29,16 @@ public class Candidat extends Personne {
 		}
 
 
+		public Test getTest() {
+			return test;
+		}
+
+
+		public void setTest(Test test) {
+			this.test = test;
+		}
+
+
 		public void setCleAcces(String cleAcces) {
 			this.cleAcces = cleAcces;
 		}

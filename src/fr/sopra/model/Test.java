@@ -33,7 +33,7 @@ public class Test {
 		@Column(name="TES_DATE")
 		private Date date;
 
-		@OneToMany(mappedBy="test")
+		@OneToMany(mappedBy="test")	
 		private List<Questionnaire> questionnaires;
 		
 		
@@ -48,6 +48,30 @@ public class Test {
 		
 		
 		
+		public List<Questionnaire> getQuestionnaires() {
+			return questionnaires;
+		}
+
+		public void setQuestionnaires(List<Questionnaire> questionnaires) {
+			this.questionnaires = questionnaires;
+		}
+
+		public List<Reponse> getReponses() {
+			return reponses;
+		}
+
+		public void setReponses(List<Reponse> reponses) {
+			this.reponses = reponses;
+		}
+
+		public Candidat getCandidat() {
+			return candidat;
+		}
+
+		public void setCandidat(Candidat candidat) {
+			this.candidat = candidat;
+		}
+
 		public Integer getIdTest() {
 			return idTest;
 		}

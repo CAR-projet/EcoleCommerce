@@ -10,7 +10,7 @@
 		<c:forEach items="${ tests }" var="test">
 			<li>
 				<div class="collapsible-header">
-					Test #${ test.id }
+					Test #${ test.idTest }
 				</div>
 				
 				<div class="collapsible-body">
@@ -21,7 +21,12 @@
 				
 				<div class="collapsible-body">
 					<p>
-						B : Branche : ${ test.branche}
+						 Branche : ${ test.branche}
+					</p>
+				</div>
+				<div class="collapsible-body">
+					<p>
+						 Candidat : ${ test.candidat.nom}
 					</p>
 				</div>
 			</li>

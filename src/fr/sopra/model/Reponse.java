@@ -46,6 +46,30 @@ public class Reponse {
 
 
 
+	public Test getTest() {
+		return test;
+	}
+
+
+
+	public void setTest(Test test) {
+		this.test = test;
+	}
+
+
+
+	public Question getQuestion() {
+		return question;
+	}
+
+
+
+	public void setQuestion(Question question) {
+		this.question = question;
+	}
+
+
+
 	/**
 	 * @param idReponse the idReponse to set
 	 */

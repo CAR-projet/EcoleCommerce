@@ -22,7 +22,6 @@ public class TestController {
 		@RequestMapping("")
 		public String getAll(Model model) {
 			model.addAttribute("tests", this.TestDao.findAll());
-			
 			return "tests";
 		}
 }

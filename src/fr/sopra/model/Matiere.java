@@ -38,6 +38,20 @@ public class Matiere {
 
 
 
+	public List<Questionnaire> getQuestionnaires() {
+		return questionnaires;
+	}
+
+
+
+
+	public void setQuestionnaires(List<Questionnaire> questionnaires) {
+		this.questionnaires = questionnaires;
+	}
+
+
+
+
 	/**
 	 * @param idMatiere the idMatiere to set
 	 */
